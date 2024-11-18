@@ -12,28 +12,56 @@ import {
 import { useRouter } from "expo-router";
 import { Container } from "@/components/Container";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons"; // Import the icon component
 
 const slides = [
 	{
 		id: "1",
 		title: "Easy, Perfect & Custom Fit",
 		description:
-			"Discover nearby tailor shops to elevate your style with a perfect, custom fit in every occasion.",
-		image: require("../assets/images/tailor-landing.jpg"), // Replace with your image
+			"Helps you find the finest tailors in your area, known for their exceptional craftsmanship and attention to detail..",
+		image: require("../assets/images/tailor-landing.jpg"),
+		icon: (
+			<MaterialCommunityIcons name="tape-measure" size={50} color="black" />
+		),
 	},
 	{
 		id: "2",
-		title: "Hassle-Free Shopping Experience",
+		title: "Hassle-Free Shopping",
 		description:
 			"With endless choices of fabrics, styles, and designs to choose from numerous tailor shops.",
-		image: require("../assets/images/shopping.jpg"), // Replace with your image
+		image: require("../assets/images/shopping.jpg"),
+		icon: (
+			<MaterialCommunityIcons name="cart-outline" size={50} color="black" />
+		),
 	},
 	{
 		id: "3",
 		title: "Secure and Easy Payment",
 		description:
 			"Pay securely and easily with various payment methods available in the app.",
-		image: require("../assets/images/payment.jpg"), // Replace with your image
+		image: require("../assets/images/payment.jpg"),
+		icon: (
+			<MaterialCommunityIcons
+				name="credit-card-check-outline"
+				size={50}
+				color="black"
+			/>
+		),
+	},
+	{
+		id: "4",
+		title: "A World of Tailored Convenience",
+		description:
+			"     Discover nearby tailor shops dedicated to elevating your style with a perfect, custom fit.",
+		image: require("../assets/images/last_page.jpg"),
+		icon: (
+			<MaterialCommunityIcons
+				name="storefront-outline"
+				size={50}
+				color="black"
+			/>
+		),
 	},
 ];
 
@@ -60,7 +88,7 @@ export default function Welcome() {
 			setCurrentIndex(nextIndex);
 			flatListRef.current?.scrollToIndex({ index: nextIndex }); // Scroll to the next slide
 		} else {
-			router.push("/"); // Navigate to signup
+			router.push("/signup"); // Navigate to signup
 			console.log("Navigating to signup");
 		}
 	};
@@ -78,8 +106,12 @@ export default function Welcome() {
 				resizeMode="cover"
 			/>
 			<View className="h-1/2"></View>
-			<View className="h-1/2 w-full justify-center rounded-t-[50px] bg-[#D9D9D9] px-4">
-				<Text className="mt-6 text-center text-4xl font-bold font-Poppins mx-4">
+			<View className="h-1/2 w-full justify-center items-center rounded-t-[50px] bg-[#D9D9D9] px-4 pb-12">
+				{item.icon && (
+					<View className="mb-4 justify-center items-center">{item.icon}</View>
+				)}
+				{/* Render icon if available */}
+				<Text className="text-center text-4xl font-bold font-Poppins mx-4">
 					{item.title}
 				</Text>
 				<Text className="mt-4 text-center text-base text-gray-600 font-Poppins">
@@ -104,51 +136,72 @@ export default function Welcome() {
 				)}
 				keyExtractor={(item) => item.id}
 			/>
-			{/* Footer Navigation */}
 			<View className="absolute bottom-6 w-full px-6">
 				<View className="flex-row items-center justify-between">
+					{/* Conditional rendering based on the currentIndex */}
 					{currentIndex < slides.length - 1 ? (
-						<TouchableOpacity onPress={handleSkip}>
-							<Text className="text-sm font-semibold text-gray-700">Skip</Text>
-						</TouchableOpacity>
+						// Show navigation controls for non-final slides
+						<>
+							<TouchableOpacity onPress={handleSkip}>
+								<Text className="text-sm font-semibold text-gray-700">
+									Skip
+								</Text>
+							</TouchableOpacity>
+							<View className="flex-row gap-2">
+								{slides.map((_, index) => {
+									const scale = scrollX.interpolate({
+										inputRange: [
+											(index - 1) * width,
+											index * width,
+											(index + 1) * width,
+										],
+										outputRange: [1, 1.5, 1],
+										extrapolate: "clamp",
+									});
+									const backgroundColor = scrollX.interpolate({
+										inputRange: [
+											(index - 1) * width,
+											index * width,
+											(index + 1) * width,
+										],
+										outputRange: ["#ffffff", "#FF735C", "#ffffff"],
+										extrapolate: "clamp",
+									});
+									return (
+										<Animated.View
+											key={index}
+											style={{ transform: [{ scale }], backgroundColor }}
+											className="h-3 w-3 rounded-full"
+										/>
+									);
+								})}
+							</View>
+							<TouchableOpacity
+								onPress={handleNext}
+								className="bg-primary h-12 w-12 rounded-full justify-center items-center"
+							>
+								<MaterialIcons name="navigate-next" size={24} color="white" />
+							</TouchableOpacity>
+						</>
 					) : (
-						<View style={{ width: 25 }} /> // Placeholder to maintain layout
+						// Show sign-up/sign-in buttons only on the final slide
+						currentIndex === slides.length - 1 && (
+							<View className="flex-row justify-between w-full">
+								<TouchableOpacity
+									onPress={() => router.push("/signup")}
+									className="bg-primary h-12 w-44 px-4 rounded-full justify-center items-center"
+								>
+									<Text className="text-white font-semibold">Sign Up</Text>
+								</TouchableOpacity>
+								<TouchableOpacity
+									onPress={() => router.push("/signin")}
+									className="bg-secondary h-12 w-44 px-4 bg-white rounded-full justify-center items-center"
+								>
+									<Text className="text-black font-semibold">Sign In</Text>
+								</TouchableOpacity>
+							</View>
+						)
 					)}
-					<View className="flex-row gap-2">
-						{slides.map((_, index) => {
-							const scale = scrollX.interpolate({
-								inputRange: [
-									(index - 1) * width,
-									index * width,
-									(index + 1) * width,
-								],
-								outputRange: [1, 1.5, 1],
-								extrapolate: "clamp",
-							});
-							const backgroundColor = scrollX.interpolate({
-								inputRange: [
-									(index - 1) * width,
-									index * width,
-									(index + 1) * width,
-								],
-								outputRange: ["#ffffff", "#FF735C", "#ffffff"],
-								extrapolate: "clamp",
-							});
-							return (
-								<Animated.View
-									key={index}
-									style={{ transform: [{ scale }], backgroundColor }}
-									className="h-3 w-3 rounded-full"
-								/>
-							);
-						})}
-					</View>
-					<TouchableOpacity
-						onPress={handleNext}
-						className="bg-primary h-12 w-12 rounded-full justify-center items-center"
-					>
-						<MaterialIcons name="navigate-next" size={24} color="white" />
-					</TouchableOpacity>
 				</View>
 			</View>
 		</View>
