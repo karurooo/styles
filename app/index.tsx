@@ -1,3 +1,4 @@
+import "react-native-get-random-values";
 import React, { useState, useRef, useEffect } from "react";
 import {
 	Text,
@@ -10,9 +11,12 @@ import {
 	Animated,
 } from "react-native";
 import { useRouter } from "expo-router";
-import { Container } from "@/components/Container";
+import { Container } from "~/components/Container";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons"; // Import the icon component
+import { useUserStore } from "~/store/users";
+import CustomSplash from "~/components/CustomSplash"; // Import the CustomSplash component
+import { Button } from "~/components/Button";
 
 const slides = [
 	{
@@ -66,6 +70,7 @@ const slides = [
 ];
 
 export default function Welcome() {
+	const [isSplashVisible, setIsSplashVisible] = useState(true); // Add state to manage splash visibility
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const router = useRouter();
 	const { width } = useWindowDimensions(); // Add this line to get the width
@@ -82,20 +87,29 @@ export default function Welcome() {
 		};
 	}, [scrollX, width]);
 
+	const handleSplashFinish = () => {
+		setIsSplashVisible(false); // Hide splash screen when finished
+	};
+
+	if (isSplashVisible) {
+		return <CustomSplash onFinish={handleSplashFinish} />; // Show splash screen if visible
+	}
+
 	const handleNext = () => {
 		if (currentIndex < slides.length - 1) {
 			const nextIndex = currentIndex + 1;
 			setCurrentIndex(nextIndex);
 			flatListRef.current?.scrollToIndex({ index: nextIndex }); // Scroll to the next slide
 		} else {
-			router.push("/signup"); // Navigate to signup
+			router.push("/getStarted"); // Navigate to signup
 			console.log("Navigating to signup");
 		}
 	};
 
 	const handleSkip = () => {
-		router.push("//"); // Navigate to signup
-		console.log("Navigating to skip to signup");
+		const lastIndex = slides.length - 1;
+		setCurrentIndex(lastIndex);
+		flatListRef.current?.scrollToIndex({ index: lastIndex }); // Scroll to the last slide
 	};
 
 	const renderItem = ({ item }: { item: any }) => (
@@ -106,7 +120,7 @@ export default function Welcome() {
 				resizeMode="cover"
 			/>
 			<View className="h-1/2"></View>
-			<View className="h-1/2 w-full justify-center items-center rounded-t-[50px] bg-[#D9D9D9] px-4 pb-12">
+			<View className="h-1/2 w-full justify-center items-center rounded-t-[50px] bg-secondary px-4 pb-12">
 				{item.icon && (
 					<View className="mb-4 justify-center items-center">{item.icon}</View>
 				)}
@@ -147,7 +161,7 @@ export default function Welcome() {
 									Skip
 								</Text>
 							</TouchableOpacity>
-							<View className="flex-row gap-2">
+							<View className="flex-1 flex-row justify-center items-center gap-2">
 								{slides.map((_, index) => {
 									const scale = scrollX.interpolate({
 										inputRange: [
@@ -171,7 +185,7 @@ export default function Welcome() {
 										<Animated.View
 											key={index}
 											style={{ transform: [{ scale }], backgroundColor }}
-											className="h-3 w-3 rounded-full"
+											className="h-2 w-2 rounded-full"
 										/>
 									);
 								})}
@@ -187,18 +201,7 @@ export default function Welcome() {
 						// Show sign-up/sign-in buttons only on the final slide
 						currentIndex === slides.length - 1 && (
 							<View className="flex-row justify-between w-full">
-								<TouchableOpacity
-									onPress={() => router.push("/signup")}
-									className="bg-primary h-12 w-44 px-4 rounded-full justify-center items-center"
-								>
-									<Text className="text-white font-semibold">Sign Up</Text>
-								</TouchableOpacity>
-								<TouchableOpacity
-									onPress={() => router.push("/signin")}
-									className="bg-secondary h-12 w-44 px-4 bg-white rounded-full justify-center items-center"
-								>
-									<Text className="text-black font-semibold">Sign In</Text>
-								</TouchableOpacity>
+								<Button title="Get Started" onPress={handleNext} />
 							</View>
 						)
 					)}

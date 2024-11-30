@@ -38,8 +38,8 @@ const AlertModal: React.FC<AlertProps> = ({
 			animationType="fade"
 			onRequestClose={onClose}
 		>
-			<View className="flex-1 items-center justify-center bg-darkBlack/80">
-				<View className="relative h-2/5 w-4/5 justify-between rounded-lg bg-cream p-5 shadow-lg">
+			<View className="flex-1 items-center justify-center bg-secondary/80 z-50">
+				<View className="relative h-2/5 w-4/5 justify-between rounded-lg bg-white p-5 shadow-lg">
 					<View style={{ alignItems: "center", marginBottom: 10 }}>
 						<AntDesign name={getIconName()} size={48} color="black" />
 					</View>
@@ -56,20 +56,20 @@ const AlertModal: React.FC<AlertProps> = ({
 						contentContainerStyle={{ justifyContent: "center" }}
 						className="py-4"
 					>
-						<Text className="text-center text-lg">{message}</Text>
+						<Text className="text-center text-lg font-Poppins">{message}</Text>
 					</ScrollView>
 					{type === "confirmation" ? (
 						<View className="flex-row justify-between pt-2">
 							<TouchableOpacity
 								onPress={onClose}
-								className="mx-2 w-32 flex-row items-center justify-evenly rounded border border-darkGreen bg-lightGreen px-4 py-2"
+								className="mx-2 w-32 flex-row items-center justify-evenly rounded border border-black bg-lightGreen px-4 py-2"
 							>
 								<Ionicons name="close" size={20} color="black" />
-								<Text className="text-darkGreen ">Cancel</Text>
+								<Text className="text-black ">Cancel</Text>
 							</TouchableOpacity>
 							<TouchableOpacity
 								onPress={onConfirm}
-								className="mx-2 w-32 flex-row items-center justify-evenly rounded border border-darkGreen bg-oliveGreen px-4 py-2"
+								className="mx-2 w-32 flex-row items-center justify-evenly rounded border border-black bg-oliveGreen px-4 py-2"
 							>
 								<AntDesign name="checkcircleo" size={18} color="black" />
 								<Text className=" text-white">Confirm</Text>
@@ -79,9 +79,9 @@ const AlertModal: React.FC<AlertProps> = ({
 						<View className="flex-row justify-center pt-2">
 							<TouchableOpacity
 								onPress={onClose}
-								className="mx-2 w-32 flex-row items-center justify-evenly rounded border border-darkGreen bg-oliveGreen px-4 py-2"
+								className="mx-2 w-32 flex-row items-center justify-evenly rounded border border-darkGreen bg-primary px-4 py-2"
 							>
-								<Ionicons name="close" size={20} color="black" />
+								<Ionicons name="close" size={20} color="white" />
 								<Text className="text-white">Close</Text>
 							</TouchableOpacity>
 						</View>

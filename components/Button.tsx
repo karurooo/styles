@@ -4,15 +4,19 @@ import { ReactNode } from "react";
 interface ButtonProps {
 	onPress: () => void;
 	title?: string;
+	disabled?: boolean; // Add disabled prop
 }
 
-export const Button = ({ onPress, title }: ButtonProps) => {
+export const Button = ({ onPress, title, disabled }: ButtonProps) => {
 	return (
 		<TouchableOpacity
 			onPress={onPress}
-			className="bg-primary mt-4 h-10 w-56 flex-row items-center justify-center rounded-2xl"
+			disabled={disabled} // Use disabled prop
+			className={`bg-primary mt-2 h-10 w-full flex-row items-center justify-center rounded-xl ${
+				disabled ? "opacity-50" : ""
+			}`} // Add opacity when disabled
 		>
-			<Text className="font-Poppins mr-2  text-white">{title}</Text>
+			<Text className="font-Poppins mr-2 text-white">{title}</Text>
 		</TouchableOpacity>
 	);
 };

@@ -1,0 +1,509 @@
+export const products = [
+
+	// ------ UNIFORMS -------
+	{
+		name: "Teacher's Uniform for Female",
+		price: 390.99,
+		image: require("~/assets/images/products/uniforms/dalgen-teacheres-uniform-002.png"),
+		Qty: 10,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Uniform",
+		description: "Description for Teacher's Uniform for Female", // Add description
+        shop: " "
+	},
+	{
+		name: "Teacher's Uniform for Male",
+		price: 490.99,
+		image: require("~/assets/images/products/uniforms/dalgen-teacheres-uniform-004.png"),
+		Qty: 4,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Uniform",
+		description: "Description for Teacher's Uniform for Male", // Add description
+	},
+	{
+		name: "Scrubsuit for Male",
+		price: 1080.00,
+		image: require("~/assets/images/products/uniforms/dalgen-scrubs-002.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Uniform",
+		description: "Scrubsuit | Doctor | Nurse Uniform SS09B | CARGO Pants V-Neck with Shoulder Strip and Side Combination", // Add description
+	},
+	{
+		name: "Flag-inspired Polo Shirt",
+		price: 899.00,
+		image: require("~/assets/images/products/uniforms/jyd-philippines-polo-shirt-003.png"),
+		Qty: 10,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Uniform",
+		description: "Proud of your country? Get this one of a kind 3 Stars and the Sun polo shirt!", // Add description
+	},
+	{
+		name: "Men's Crest Polo with Philippines Patch",
+		price: 899.00,
+		image: require("~/assets/images/products/uniforms/jyd-polo-shirt-with-ph-crest-002.png"),
+		Qty: 10,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Uniform",
+		description: "Proud of your country? Get this one of a kind polo shirt!", // Add description
+	},
+	{
+		name: "Work Polo Shirt",
+		price: 450.00,
+		image: require("~/assets/images/products/uniforms/jyd-work-polo-002.png"),
+		Qty: 10,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Uniform",
+		description: "Short Sleeve Polo Shirt makes a perfect uniform for your outdoor employees – from landscapers to caddies. It’s polished, moisture-wicking and breathable. Add your logo and create a consistent look for your brand.", // Add description
+	},
+
+
+
+
+
+
+
+	// ------ FORMAL WEAR -------
+	{
+		name: "Men's Cocoon Burik Tattoo Inspired Barong in White",
+		price: 3000.00,
+		image: require("~/assets/images/products/formal-wear/gjm-barong-001.png"),
+		Qty: 2,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Long sleeved formal barong with tattoo inspired embroidery details all over. Full collar, full open", // Add description
+	},
+	{
+		name: "Floral Organza Wide Leg Pants",
+		price: 1200.00,
+		image: require("~/assets/images/products/formal-wear/gjm-floral-wide-leg-pants-001.png"),
+		Qty: 3,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Made from high quality organza fabric. With hand-painted dusty blue floral details on both side. Natural color", // Add description
+	},
+	{
+		name: "Green Blain Slim Suit Jacket",
+		price: 3500.00,
+		image: require("~/assets/images/products/formal-wear/gjm-green-blain-slim-suit-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "From business meeting to the races, the Blain Slim Suit Jacket is your staple for formal events. With a double button closure, chest pockets and a notch lapel, you'll be feeling sharp for any event. Complete the suit with the Blain Slim Pant, dress shoes and a matching belt. Wear the jacket with chinos and loafers for date night.", // Add description
+	},
+	{
+		name: "Men's Ivory White Shawl Lapel Tuxedo",
+		price: 2500.00,
+		image: require("~/assets/images/products/formal-wear/gjm-ivory-white-shawl-lapel-tuxedo-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Nonfunctional four-button cuffs. 
+					Double side back vent. 
+					Fully lined. 
+					Satin-covered buttons. 
+					Chest pocket, satin-trimmed welt pockets, interior pocket. 
+					Single-button front. 
+					Satin shawl lapel.", // Add description
+	},
+	{
+		name: "Men's Jusi Barong in two tone Color",
+		price: 3000.00,
+		image: require("~/assets/images/products/formal-wear/gjm-jusi-barong-two-tone-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Long sleeved formal barong. 
+					Design inspired by capiz shells; embroidery all over. 
+					Made from Jusi fabric. 
+					Full collar, half open.", // Add description
+	},
+	{
+		name: "Emily Midi Dress",
+		price: 3500.00,
+		image: require("~/assets/images/products/formal-wear/gjm-midi-dress-001.png"),
+		Qty: 2,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Experience elegance and functionality with our laconic midi-length satin dress. Featuring a chic lace-up corset for a flattering fit and convenient pockets, this dress seamlessly combines style and practicality, making it perfect for any occasion.", // Add description
+	},
+	{
+		name: "Modern Fit Double Breasted Suit",
+		price: 2800.00,
+		image: require("~/assets/images/products/formal-wear/gjm-modern-fit-double-breasted-suit-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Classic style and contemporary detailing come together with this handsome suit from JOE Joseph Abboud. Fashioned with a quality wool blend, it pairs a peak-lapel jacket with flat-front pants for a polished look.", // Add description
+	},
+	{
+		name: "Peggi Dress",
+		price: 2390.00,
+		image: require("~/assets/images/products/formal-wear/gjm-peggi-dress-001.png"),
+		Qty: 4,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "A chic and versatile short dress available in a timeless white and a bold black, perfect for various occasions from weddings to elegant soirées. Crafted from delicate organza, this dress is designed to make a statement with its contemporary elegance and attention to detail.", // Add description
+	},
+	{
+		name: "Rosemary Dress",
+		price: 2760.00,
+		image: require("~/assets/images/products/formal-wear/gjm-rosemary-dress-002.png"),
+		Qty: 2,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Meet the Rosemary Dress: where timeless elegance gets a fresh twist for the modern bride. Crafted from the most luxurious satin, this dress isn't just a piece of clothing—it's a statement. It's for the bride who's all about that minimalist chic but still wants that sprinkle of romance on her big day.", // Add description
+	},
+	{
+		name: "Shelton Fluid Velvet Cocktail Jacket",
+		price: 5650.00,
+		image: require("~/assets/images/products/formal-wear/gjm-shelton-fluid-velvet-cocktail-jacket-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Complete your evening-out look with timeless elegance and sophistication in this peaked-lapel jacket impeccably tailored from fluid velvet.", // Add description
+	},
+	{
+		name: "Skinny Fit Single Breasted 3-Piece Suit",
+		price: 5542.00,
+		image: require("~/assets/images/products/formal-wear/gjm-skinny-3-piece-suit-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Elevate your style with this Skinny Fit Single Breasted Three-Piece Suit, a modern essential for sharp, sophisticated dressing. Featuring a tailored skinny fit, this set includes a single-breasted jacket, a versatile waistcoat, and matching trousers, all designed to create a sleek, streamlined silhouette. Made from premium materials, this suit combines comfort and durability, ensuring you look and feel confident at any formal event or professional setting. ", // Add description
+	},
+	{
+		name: "Slim Fit Stretch Tuxedo Jacket",
+		price: 3590.00,
+		image: require("~/assets/images/products/formal-wear/gjm-slim-fit-002.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Dress to impress with this smart tuxedo jacket. It's made in a sleek slim fit with added stretch for comfortable wear. The single breasted fastening elevates the contemporary styling. Satin fabric on the peak lapels and welt pockets brings a luxurious finishing touch. M&S Collection: easy-to-wear wardrobe staples that combine classic and contemporary styles.", // Add description
+	},
+	{
+		name: "Slim Suit Trouser",
+		price: 1200.00,
+		image: require("~/assets/images/products/formal-wear/gjm--slim-suit-trouser-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "You choose the occasion. 
+					Plain design. 
+					Regular rise. 
+					Belt loops. 
+					Concealed fly. 
+					Slim fit. ", // Add description
+	},
+	{
+		name: "Women's Linen Silk Ylang Ylang Embroidered Barong",
+		price: 3000,
+		image: require("~/assets/images/products/formal-wear/gjm-womens-embroidered-barong-002.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Made from linen silk. 
+					Natural color with ylang-ylang embroidery details in front. 
+					Long sleeves barong with regular collar; wear it untucked for a more relaxed, traditional look, or tuck under a skirt or pants to highlight the waist", // Add description
+	},
+	{
+		name: "Women's Layered Skirt in Black",
+		price: 2999.00,
+		image: require("~/assets/images/products/formal-wear/gjm-womens-pina-bolero-top-layered-skirt-black-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "High-to-low hem / long-back style. 
+					With a thick waist band, Hook and zipper closure at the back", // Add description
+	},
+	{
+		name: " ",
+		price: 3000,
+		image: require("~/assets/images/products/formal-wear/gjm-barong-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "", // Add description
+	},
+	{
+		name: "3-Piece Slim Fit Classic Maroon Suit",
+		price: 4800.00,
+		image: require("~/assets/images/products/formal-wear/popetri-3-piece-mens-suit-002.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "This suit with peaked lapel design and a small cut with 3D draping. notched lapel, four buttons on the sleeve, and button closure. Flat front free-length pants with extended waist strap and slanted side pockets. Slim fit suits are a little tighter than regular fit suits. When you put it on, it makes you smaller and sharp. And looks modern and handsome.
+", // Add description
+	},
+	{
+		name: " ",
+		price: 3000,
+		image: require("~/assets/images/products/formal-wear/gjm-barong-001.png"),
+		Qty: 3,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "", // Add description
+	},
+	{
+		name: "Huge 3 Piece Peak Lapel Slim Fit Suit",
+		price: 6600.00,
+		image: require("~/assets/images/products/formal-wear/popetri-3-piece-peak-lapel-slim-fit-suit-001.png"),
+		Qty: 4,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Jacket: peak lapel, front button closure, four non-functional sleeve buttons, double back vent. 
+					Vest: V-neck, four-button closure at front, two welt pockets. 
+					Pants: zip fly with hook closure, belt loops, flat front, pockets.", // Add description
+	},
+	{
+		name: "Charcoal Infinity Suit",
+		price: 1795.00,
+		image: require("~/assets/images/products/formal-wear/gjm-barong-001.png"),
+		Qty: 6,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Charcoal Suit is a classic wardrobe staple. Classic B-fit. Notch Lapel. Two Button Single Breasted. Flap Pockets. Side Vents. Fully Lined. Unfinished sleeves for precise tailoring, buttons included", // Add description
+	},
+	{
+		name: "Jacket, Straight Leg Pants & Skirt Set",
+		price: 3400.00,
+		image: require("~/assets/images/products/formal-wear/popetri-jacket-straight-leg-pants-skirt-set-001.png"),
+		Qty: 7,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Includes jacket, pants and skirt. A little stretch lends easy movement to this mix-and-match set featuring a timeless jacket, straight leg pants and a matching skirt to get you through the seasons.", // Add description
+	},
+	{
+		name: "Pleated Midi Skirt",
+		price: 900.00,
+		image: require("~/assets/images/products/formal-wear/popetri-pleated-midi-skirt-004.png"),
+		Qty: 4,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Soft pleats shape the silhouette of a wool-kissed skirt you'll want in your 9-to-5 rotation.", // Add description
+	},
+	{
+		name: "Slim Fit Three Piece Suit",
+		price: 2100.00,
+		image: require("~/assets/images/products/formal-wear/popetri-slim-fit-3-piece-suit-003.png"),
+		Qty: 3,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "Jacket: notch lapel, front button closure, flap pockets at front, one welt pocket at chest, double back vent, lined
+					Vest: V-neck, four-button closure at front, two welt pockets
+					Pants: zip fly with hook closure, belt loops, flat front, pockets, unfinished hem, lined", // Add description
+	},
+	{
+		name: "Ultra Skyrise Wide Leg Pants",
+		price: 800.00,
+		image: require("~/assets/images/products/formal-wear/popetri-strip-wide-leg-pants-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Formal Wear",
+		description: "A timeless look for work and beyond, these wide-leg pants feature a pleated high waist, sleek pinstripes and 'Ab'solution powermesh panels that mold and hold.", // Add description
+	},
+
+
+
+
+
+
+
+	// ---- SEMI FORMAL WEAR  --------
+
+	{
+		name: "Faux Leather Blazer",
+		price: 1390.00,
+		image: require("~/assets/images/products/formal-wear/popetri-faux-leather-blazer-002.png"),
+		Qty: 2,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Semi Formal",
+		description: "A faux-leather blazer is cut in a fitted silhouette and delivers all the supple swagger of the real deal.", // Add description
+	},
+
+	{
+		name: "Sebastian Waistcoat",
+		price: 1290.00,
+		image: require("~/assets/images/products/semi-formal/gjm-double-breasted-blazer-002.png"),
+		Qty: 3,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Semi Formal",
+		description: "The Sebastian Waistcoat exudes classic style with a double-breasted blazer neckline, adorned with signature gold rose buttons. It's designed for an oversized fit, crafted from 100% Ramie with a textured finish for structure.", // Add description
+	},
+	{
+		name: "Pleated Long Sleeve Midi Dress",
+		price: 995.00,
+		image: require("~/assets/images/products/semi-formal/popetri-long-sleeve-midi-dress-001.png"),
+		Qty: 3,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Semi Formal",
+		description: "Soft pleats lend graceful movement to this polished midi elevated with high-shine studs.", // Add description
+	},
+	{
+		name: "Polka Dot Long Sleeve Shirtdress",
+		price: 1380.00,
+		image: require("~/assets/images/products/semi-formal/popetri-long-sleeve-shirtdress-001.png"),
+		Qty: 3,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Semi Formal",
+		description: "Be sweetly spotted in a desk-to-dinner shirtdress colored in a rich hue.", // Add description
+	},
+	{
+		name: "Mock Neck Dress",
+		price: 3000.00,
+		image: require("~/assets/images/products/semi-formal/popetri-mock-neck-dress-001.png"),
+		Qty: 4,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Semi Formal",
+		description: "A stylish V-stitch panel adds interest to this modern cap-sleeve dress that's a versatile choice for desk-to-dinner occasions.", // Add description
+	},
+	{
+		name: "Relaxed Fit Blazer",
+		price: 790.00,
+		image: require("~/assets/images/products/semi-formal/popetri-relaxed-fit-blazer-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Semi Formal",
+		description: "Impeccable workday style defines this one-button blazer fashioned with flap pockets and crisp notched lapels.", // Add description
+	},
+	{
+		name: "Ruffle Sheath Dress",
+		price: 1300.00,
+		image: require("~/assets/images/products/semi-formal/popetri-ruffle-dress-001.png"),
+		Qty: 2,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Semi Formal",
+		description: "Crisp ruffles sweetly refresh this figure-skimming sheath dress with a slit in the back for easy movement.", // Add description
+	},
+	{
+		name: "Stripe Long Sleeve Satin Shirtdress",
+		price: 1800.00,
+		image: require("~/assets/images/products/semi-formal/popetri-satin-shirtdress-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Semi Formal",
+		description: "Shirtdress style gets a glossy glow up in a diagonally striped option cut from lustrous satin.", // Add description
+	},
+	{
+		name: "Sharp Knit Blazer",
+		price: 930.00,
+		image: require("~/assets/images/products/semi-formal/popetri-sharp-knit-blazer-001.png"),
+		Qty: 7,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Semi Formal",
+		description: "Elevate your workday vibe in this hybrid blazer rendered with a cozy sweater-inspired feel that makes it the best of both worlds. Oversized patch pockets keep your essentials handy while notched lapels bring sophistication to your look.", // Add description
+	},
+	{
+		name: "The Straight Ankle Pant in Crepe",
+		price: 999.00,
+		image: require("~/assets/images/products/semi-formal/popetri-straight-ankle-pant-001.png"),
+		Qty: 8,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Semi Formal",
+		description: "Our straight ankle pant, in refined crepe, is flattering, versatile and has such perfect proportions. Front zip with double hook-and-bar closure. Belt loops. Back besom pockets.", // Add description
+	},
+	{
+		name: "AirSense Jacket",
+		price: 890.00,
+		image: require("~/assets/images/products/semi-formal/popetri-wool-jacket-002.jpg"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Semi Formal",
+		description: "Sleek silhouette for any occasion. Sleek regular fit, less fitted at the waist. Versatile jacket with a natural rounded shape from shoulders to sleeves.", // Add description
+	},
+	{
+		name: "Wrap Skirt",
+		price: 720.00,
+		image: require("~/assets/images/products/semi-formal/popetri-wrap-skirt-001.png"),
+		Qty: 5,
+		onPress: () => {
+			/* onPress handler */
+		},
+		category: "Semi Formal",
+		description: "A seasonless blend elevates this classic wrap skirt shut with a statement-making buckle and boasting clean lines thanks to its paneled design.", // Add description
+	},
+
+]
+]
