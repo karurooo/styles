@@ -34,7 +34,7 @@ export default function Signin() {
 	const handleSignin = async () => {
 		setLoading(true);
 		try {
-			await signIn(userStore, setShowError, setErrorMessage);
+			await signIn(userStore, setShowError, setErrorMessage, setLoading);
 			await checkAuth();
 		} catch (error) {
 			handleError(error, setErrorMessage, setShowError);
@@ -103,7 +103,7 @@ export default function Signin() {
 							<View className="flex justify-center items-center ">
 								<Button title="Sign In" onPress={handleSignin} />
 								<Text className="text-gray-500 font-Poppins my-2">
-									Don't have an account?{" "}
+									Don't have an account?
 									<Text
 										onPress={toSignup}
 										className="text-md mb-1 font-Poppins font-bold text-blue underline"
